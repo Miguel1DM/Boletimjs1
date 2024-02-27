@@ -1,7 +1,7 @@
 <h1>Boletim Web</h1>
 
 <br>
-<br> <img src="https://github.com/Miguel1DM/Cartao-de-visitas/blob/main/img/alfinete.png" width = "30px"/>**página hospedada no ** [Netlify](https://boletimjs.netlify.app/)
+<br> <img src="https://github.com/Miguel1DM/Cartao-de-visitas/blob/main/img/alfinete.png" width = "30px"/>**página hospedada no** [Netlify](https://boletimjs.netlify.app/)
 
 <br> <img src="https://github.com/Miguel1DM/Folder/blob/main/img/ferramenta11.png" width = "30px"/> **Tecnologias**
 
