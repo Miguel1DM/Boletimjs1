@@ -63,3 +63,9 @@ h2 {
 }.form button:hover{
     background-color: rgb(0, 209, 255,0.50);
 }
+
+@media(max-width: 800px){
+  .cadastro{
+    width: 50vw;
+  }
+  }
