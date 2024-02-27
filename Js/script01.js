@@ -1,64 +1,64 @@
-// Adicionando os elementos do formulário
-let nome = document.getElementById("nameInput").value;
-let nota1 = document.getElementById("nota1Input");
-let nota2 = document.getElementById("nota2Input").value;
-let nota3 = document.getElementById("nota3Input").value;
-let nota4 = document.getElementById("nota4Input").value;
-
-let btnCadastrar = document.getElementById("btnCadastrar");
+// botão criado para validar as informações inseridas e registrar o 'Aluno'.
+let btnCadastro = document.getElementById("btnCadastrar");
 
 // fazendo o evento de 'click' e executando a função de verificação dos inputs e calulo de média.
-btnCadastrar.addEventListener('click', function () {
-    let mediaFinal = 0;
-    let situacao = 0;
+btnCadastro.addEventListener("click", function () {
+  // pegando os valores do input
+  const nome = document.getElementById("nameInput").value;
+  const not1 = document.getElementById("nota1Input").value;
+  const not2 = document.getElementById("nota2Input").value;
+  const not3 = document.getElementById("nota3Input").value;
+  const not4 = document.getElementById("nota4Input").value;
 
-    // Validando os inputs
-    // if (nota1 == 0 || nota2 == 0 || nota3 == 0 || nota4 == 0 || nome == "") {
-    //     window.alert("Digite todas as notas do aluno");
-    //     return false;
-    // }
+  console.log(nome);
 
-    console.log(nota1);
+  // variáveis que serão usadas para fazerem a lógica de 'Aprovado'...
+  let medFinal = 0;
+  let situacao = "";
 
-    // Calculando a média Final
-    mediaFinal = (nota1.value + nota2.value + nota3.value + nota4.value) / 4;
+  // Validando os inputs
+  if (not1 == "" || not2 == "" || not3 == "" || not4 == "" || nome == "") {
+    window.alert("Insira todos os dados do aluno");
+    return false;
+  }
 
+  // Calculando a média Final
+  medFinal =
+    (parseInt(not1) + parseInt(not2) + parseInt(not3) + parseInt(not4)) / 4;
 
-    // Verificando a situação do Aluno
-    if (mediaFinal >= 75) {
-        situacao = 'Aprovado';
-    } else if (mediaFinal >= 50 & mediaFinal < 75) {
-        situacao = 'Recuperação';
-    } else {
-        situacao = 'Reprovado';
-    }
+  // Verificando a situação do Aluno
+  if (medFinal >= 75) {
+    situacao = "Aprovado";
+  } else if ((medFinal >= 50) & (medFinal < 75)) {
+    situacao = `Recuperação`;
+  } else {
+    situacao = `Reprovado`;
+  }
 
-    let alunoLine = document.createElement("tr");
-    alunoLine.setAttribute("class", situacao)
-    let alunoStatus = `
-        <th>${nome}</th>
-        <th>${nota1}</th>
-        <th>${nota2}</th>
-        <th>${nota3}</th>
-        <th>${nota4}</th>
-        <th>${situacao}</th>
-        <th>${mediaFinal}</th>
-    `;
-    alunoLine.innerHTML += alunoStatus;
+  //  Criando a String Cadastro
+  resultAluno = `<tr class=${situacao}>
+    <th>${nome}</th>
+    <th>${not1}</th>
+    <th>${not2}</th> 
+    <th>${not3}</th> 
+    <th>${not4}</th> 
+    <th>${situacao}</th>
+    <th>${medFinal}</th>
+  </tr>`;
 
-    // Adicionando Elemento da tabela
-    let tabelaElement = document.querySelector(".alunos table tbody");
-    tabelaElement.appendChild(alunoLine);
+  // Exibindo a seção de alunos
+  let alunos = document.querySelector(".alunos");
+  alunos.setAttribute("style", "display:block;");
 
-    // Apagando os valores dos inputs
-    nome.value = "";
-    nota1.value = ""
-    nota2.value = ""
-    nota3.value = ""
-    nota4.value = ""
+  // Inserindo usuário na tabela
+  // Adicionando dados a tabela tabela
+  let table = document.querySelector(".alunos table");
+  table.innerHTML += `<tbody>${resultAluno}</tobdy>`;
 
-    document.querySelector(".alunos").setAttribute("style", "display:block;")
-})
-
-
-
+  // limpando campos do input
+  nome = "";
+  not1 = "";
+  not2 = "";
+  not3 = "";
+  not4 = "";
+});
