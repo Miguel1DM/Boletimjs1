@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style01.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Boletim</title>
 </head>
 <body>
-    <h1 id="titulo"> Boletim escolar on-line</h1>
+    <section class="cadastro">
+        <h1> Boletim Escolar</h1>
+        <h2>Cadastre um Aluno</h2>
 
-    <div id="inputA">
-        <input type="number" id="quantAlunos" class="infos">
-        <label for="quantAlunos" id="textquant"> Informe a quantidade de alunos que você quer registrar </label>
-    </div>
-    <button id="adc"> Adicionar Aluno(s) </button>
+        <div class="form">
+            <input type="text" id="nameInput" placeholder="Insira o nome do aluno">
+            <input type="number" id="nota1Input" placeholder="1a Nota">
+            <input type="number" id="nota2Input" placeholder="2a Nota">
+            <input type="number" id="nota3Input" placeholder="3a Nota">
+            <input type="number" id="nota4Input" placeholder="4a Nota">
+            <button id="btnCadastrar">Cadastre um Aluno</button>
+        </div>
+    </section>
+    <section class="alunos" style="display: none;">
+        <h1>Alunos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>1ª Nota</th>
+                    <th>2ª Nota</th>
+                    <th>3ª Nota</th>
+                    <th>4ª Nota</th>
+                    <th>Status</th>
+                    <th>Média Final</th>
+                </tr>
+            </thead>
 
-    <div id="inputs"></div>
-    <script src="Js/script01.js"></script>
+        </table>
+    </section>
 
-    <p id="teste"></p>
-    
+    <script src="js/script01.js"></script>
 </body>
 </html>
