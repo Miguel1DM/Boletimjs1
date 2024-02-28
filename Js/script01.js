@@ -109,6 +109,7 @@ btoCad.addEventListener('click', function () {
               <th>${medFinal}</th>
             </tr>`;     
           }
+          document.getElementById("#tblAbaixoMedia").setAttribute("style","display:block;")
         })
         console.log(alunosAbaixo)
         return false;

@@ -9,12 +9,12 @@
 <body>
     <section class="cadastro">
         <h1> Boletim Escolar</h1>
-
-        <input type="number" placeholder="Quantidade de alunos"  id="quatAl">
-        <button id="cadAl">Cadastrar Alunos</button>
-        <h2 id="subTi">Cadastre um Aluno</h2>
-
+        <div>
+            <input type="number" placeholder="Quantidade de alunos"  id="quatAl">
+            <button id="cadAl">Cadastrar Alunos</button>
+        </div>
         <div class="form" id="teste1">
+            <h2 id="subTi">Cadastre um Aluno</h2>
             <input type="text" id="nameInput" placeholder="Insira o nome do aluno">
             <input type="number" id="nota1Input" placeholder="1a Nota">
             <input type="number" id="nota2Input" placeholder="2a Nota">
@@ -45,7 +45,8 @@
                 </tr>
             </tfoot>
         </table>
-        <table id="tblAbaixoMedia">
+        <h1>Alunos Reprovados</h1>
+        <table id="tblAbaixoMedia" >
             <thead>
                 <tr>
                     <th>Nome</th>
