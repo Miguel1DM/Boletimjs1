@@ -6,6 +6,11 @@
   color: white;
 }
 
+div{
+    width: 100%;
+}
+
+
 h2 {
   width: 100%;
   font-size: 24px;
@@ -18,7 +23,7 @@ h2 {
   margin: 18px auto;
 }
 
-.form input {
+input {
   width: 90vw;
   background-color: rgba(217, 217, 217, 0.25);
   border: none;
@@ -28,7 +33,7 @@ h2 {
   margin-bottom: 10px;
   border-radius: 10px;
 }
-.form input:focus {
+input:focus {
   outline: none;
   color: rgba(255, 255, 255, 0.5);
   background-color: rgba(217, 217, 217, 0.5);
@@ -44,30 +49,21 @@ h2 {
   flex-flow: column;
 }
 
-.form button {
-  background-color: rgb(0, 209, 255, 0.25);
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20%;
-  margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(255, 255, 255, 0.5);
-}
-.form button:hover {
-  background-color: rgb(0, 209, 255, 0.5);
+button{
+    background-color: rgb(0, 209, 255,0.25);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(255, 255, 255,0.5);
+}button:hover{
+    background-color: rgb(0, 209, 255,0.50);
 }
 
-@media (max-width: 800px) {
+@media(max-width: 800px){
   .cadastro{
     width: 50vw;
   }
-  
-  .form input:nth-child(2),
-  .form input:nth-child(3),
-  .form input:nth-child(4),
-  .form input:nth-child(5),
-  .form input:nth-child(6) {
-    width: 16vw;
   }
-}

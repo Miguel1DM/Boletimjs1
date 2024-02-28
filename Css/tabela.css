@@ -1,43 +1,43 @@
-.alunos {
-  width: max-content;
-  margin: 80px auto;
-  color: white;
+.alunos{
+    width: max-content;
+    margin: 80px 300px;
+    color: white;
 }
 
-.alunos table tr {
-  display: flex;
-  gap: 0;
-  background-color: rgb(150, 150, 150, 0.5);
-  border-radius: 10px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.alunos th {
-  color: rgb(255, 255, 255, 0.75);
-  padding: 10px 15px;
-  text-align: center;
-}
-
-.alunos tbody .Aprovado {
-  background-color: rgba(130, 255, 165, 0.5);
-}
-.alunos tbody .Recuperação {
-  background-color: rgba(243, 255, 111, 0.5);
-}
-.alunos tbody .Reprovado {
-  background-color: rgba(255, 111, 111, 0.5);
-}
-
-@media (max-width: 800px) {
-  .alunos {
-    width: 95%;
-  }
-  .alunos table tr {
+.alunos table{
     width: 100%;
-    font-size: 12px;
-  }
-  .alunos table th {
-    padding: 8px;
-  }
+}
+
+.alunos table tr{
+    display: flex;
+    gap: 0;
+    background-color: rgb(150, 150, 150,0.5);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.alunos tbody{
+    margin: 5px 0;
+    display: grid;
+    gap: 5px;
+}
+
+.alunos th{
+    color: rgb(255, 255, 255,0.75);
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.alunos #tblAbaixoMedia{
+    margin-top: 20px;
+}
+
+.alunos table .Aprovado{
+    background-color: rgba(130, 255, 165,0.5);
+}
+.alunos table .Recuperação{
+    background-color: rgba(243, 255, 111,0.5);
+}
+.alunos table .Reprovado{
+    background-color: rgba(255, 111, 111,0.5);
 }
