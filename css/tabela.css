@@ -4,11 +4,36 @@
     color: white;
 }
 
+.Aprovado{
+    color: rgba(130, 255, 165,0.5);
+}
+.Recuperação{
+    color: rgba(243, 255, 111,0.5);
+}
+.Reprovado{
+    color: rgba(255, 111, 111,0.5);
+}
+
+.alunos table{
+    width: 100%;
+}
+
 .alunos table tr{
-    display: flex;
+    display: grid;
     gap: 0;
     background-color: rgb(150, 150, 150,0.5);
     border-radius: 10px;
+    margin-bottom: 3px;
+    justify-content: space-between;
+}
+
+.alunos #tblAlunos tr{
+    grid-template-columns: 9vw 9vw 9vw 9vw 9vw 9vw 9vw;
+}
+
+.alunos #tblAbaixoMedia tr{
+    grid-template-columns: 30% 30% 30%;
+    margin-bottom: 3px;
 }
 
 .alunos th{
@@ -17,12 +42,6 @@
     text-align: center;
 }
 
-.alunos tbody .Aprovado{
-    background-color: rgba(130, 255, 165,0.5);
-}
-.alunos tbody .Recuperação{
-    background-color: rgba(243, 255, 111,0.5);
-}
-.alunos tbody .Reprovado{
-    background-color: rgba(255, 111, 111,0.5);
+.alunos #tblAbaixoMedia{
+    margin-top: 10px;
 }
