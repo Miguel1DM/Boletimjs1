@@ -1,21 +1,11 @@
 // botão criado para validar as informações inseridas e registrar o 'Aluno'.
-let btnCadastro = document.getElementById("btnCadastrar");
-let quantA = 0;
+let btnInserir = document.getElementById("btnInserir");
 let btoCad = document.getElementById('cadAl');
-let subT = document.getElementById('subTi');
-let teste = document.getElementById('teste1');
-let i = 0;
+
 let mediaGeral = 0;
-let novoarray = "";
-let alunosAbaixo= ""
 let arrayObjs = [];
 
-// fazendo o evento de 'click' e executando a função de verificação dos inputs e calulo de média.
-teste.style.display = 'none';
-subT.style.display = 'none';
 btoCad.addEventListener('click', function () {
-
-
   quantA = document.getElementById('quatAl').value;
   if (quantA == "" || quantA == 0) {
     window.alert('Informe a quantidade de alunos!!!')
@@ -67,13 +57,13 @@ btoCad.addEventListener('click', function () {
       });
 
       //  Criando a String Cadastro
-      resultAluno = `<tr class=${situacao}>
+      resultAluno = `<tr>
           <th>${nome}</th>
           <th>${not1}</th>
           <th>${not2}</th> 
           <th>${not3}</th> 
           <th>${not4}</th> 
-          <th>${situacao}</th>
+          <th class=${situacao}>${situacao}</th>
           <th>${medFinal}</th>
         </tr>`;
 
@@ -91,27 +81,12 @@ btoCad.addEventListener('click', function () {
         teste.style.display = 'none';
 
         novoarray = arrayObjs.map(function(obj){
-
           return mediaGeral += parseFloat(obj.MediaFInal);
         })
 
-        mediaGeral = mediaGeral / quantA;
-
-        document.getElementById("mediaGeral").innerText = mediaGeral;
-
-        alunosAbaixo = arrayObjs.map(function(aluno){
-          if(aluno.MediaFInal < mediaGeral){
-            // Objeto DOM do footer da tabela 
-            document.querySelector("#tblAbaixoMedia tbody").innerHTML += `
-            <tr>
-              <th>${nome}</th>
-              <th>${situacao}</th>
-              <th>${medFinal}</th>
-            </tr>`;     
-          }
-          document.getElementById("#tblAbaixoMedia").setAttribute("style","display:block;")
-        })
-        console.log(alunosAbaixo)
+        mediaGeral = mediaGeral / quantA;    
+        document.getElementById("mediaGeral").innerText = parseInt(mediaGeral);
+        
         return false;
       }
 
@@ -121,6 +96,7 @@ btoCad.addEventListener('click', function () {
       document.getElementById("nota2Input").value = "";
       document.getElementById("nota3Input").value = "";
       document.getElementById("nota4Input").value = "";
+
 
       i++
     });
