@@ -20,7 +20,7 @@
             <input type="number" id="nota2Input" placeholder="2a Nota">
             <input type="number" id="nota3Input" placeholder="3a Nota">
             <input type="number" id="nota4Input" placeholder="4a Nota">
-            <button id="btnInserir">Inserir dados do aluno</button>
+            <button id="btnCadastrar">Inserir dados do aluno</button>
         </div>
     </section>
     <section class="alunos" style="display: none;">
@@ -38,22 +38,15 @@
                 </tr>
             </thead>
             <tbody></tbody>
-            <tfoot>
+            <tfoot style="display: none;">
                 <tr>
                     <th>Média Geral</th>
                     <th id="mediaGeral"></th>
                 </tr>
             </tfoot>
         </table>
-        <h1>Alunos Reprovados</h1>
-        <table id="tblAbaixoMedia" >
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Status</th>
-                    <th>Media Final</th>
-                </tr>
-            </thead>
+        <h3 id="titleAbaixoMedia" style="display: none;">Alunos Abaixo da média da Turma</h1>
+        <table id="tblAbaixoMedia" style="display: none;">
             <tbody>
             </tbody>
         </table>
