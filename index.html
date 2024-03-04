@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Boletim</title>
 </head>
+
 <body>
     <section class="cadastro">
         <h1> Boletim Escolar</h1>
-        <div>
-            <input type="number" placeholder="Quantidade de alunos"  id="quatAl">
-            <button id="cadAl">Cadastrar Alunos</button>
-        </div>
-        <div class="form" id="teste1">
+        <form>
             <h2 id="subTi">Cadastre um Aluno</h2>
             <input type="text" id="nameInput" placeholder="Insira o nome do aluno">
             <input type="number" id="nota1Input" placeholder="1a Nota">
             <input type="number" id="nota2Input" placeholder="2a Nota">
             <input type="number" id="nota3Input" placeholder="3a Nota">
             <input type="number" id="nota4Input" placeholder="4a Nota">
-            <button id="btnCadastrar">Inserir dados do aluno</button>
-        </div>
+            <button id="btnCadastrar" type="button">Cadastre um aluno</button>
+        </form>
     </section>
     <section class="alunos" style="display: none;">
         <h1>Alunos</h1>
@@ -38,20 +36,29 @@
                 </tr>
             </thead>
             <tbody></tbody>
-            <tfoot style="display: none;">
+            <tfoot>
                 <tr>
                     <th>Média Geral</th>
                     <th id="mediaGeral"></th>
                 </tr>
             </tfoot>
         </table>
-        <h3 id="titleAbaixoMedia" style="display: none;">Alunos Abaixo da média da Turma</h1>
+        <h3 style="display: none;">Alunos Abaixo da média da Turma</h1>
         <table id="tblAbaixoMedia" style="display: none;">
-            <tbody>
-            </tbody>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Status</th>
+                    <th>Media</th>
+                </tr>
+            </thead>
+                <tbody>
+                </tbody>
         </table>
+        <p id="AlunosPagination"></p>
     </section>
 
     <script src="js/script01.js"></script>
 </body>
+
 </html>

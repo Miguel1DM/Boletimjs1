@@ -6,12 +6,6 @@
   color: white;
 }
 
-.cadastro div {
-  width: 100%;
-  display: grid;
-}
-
-
 .cadastro input {
   width: 100%;
   background-color: rgba(217, 217, 217, 0.25);
@@ -45,24 +39,28 @@
   background-color: rgb(0, 209, 255, 0.5);
 }
 
-.form {
-  width: 90%;
+form {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 18px auto;
 }
 
-.form input:nth-child(3),
-.form input:nth-child(4),
-.form input:nth-child(5),
-.form input:nth-child(6) {
+form input:nth-child(3),
+form input:nth-child(4),
+form input:nth-child(5),
+form input:nth-child(6) {
   width: 40%;
-  flex-flow: column;
 }
 
 @media (max-width: 800px) {
   .cadastro {
-    width: 50vw;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  form{
+    width: 90%;
   }
 }
